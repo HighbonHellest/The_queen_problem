@@ -5,5 +5,5 @@
 #include  <vector>
 #include "Table.h"
 #include <string>
-#define TRUE '0';
-#define FALSE '1';
+#define TRUE 0;
+#define FALSE 1;

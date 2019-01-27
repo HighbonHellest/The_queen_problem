@@ -39,7 +39,17 @@ Table Table::operator==(const Table)
 	return Table();
 }
 
-/*std::ostream & operator<<(std::ostream & stream, const Table & table)
+std::ostream & operator<<(std::ostream & stream, const Table & table)
 {
-	return &table;
-}*/
+	std::string retval;
+	for (int i = 0; i < table.mI_table.size(); ++i)
+	{
+		if (i != 0 && i%table.mI_base_size == 0)
+		{
+			stream << std::endl;
+		}
+		stream << "[" << table.mI_table[i] << "]";
+	}
+
+	return stream;
+}

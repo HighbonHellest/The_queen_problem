@@ -14,7 +14,7 @@ public:
 	Table operator ==(const Table);
 	
 	
-//	friend std::ostream& operator<<(std::ostream& stream, const Table& table);
+	friend std::ostream& operator<<(std::ostream& stream, const Table& table);
 
 
 private:
