@@ -7,7 +7,7 @@ Table::Table()
 	mB_usable = FALSE;
 }
 
-Table::Table(int a)
+Table::Table(int a) : mI_base_size(a)
 {
 	mI_base_size = a;
 	for (int i = 0; i < (a*a); ++i)
