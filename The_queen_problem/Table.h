@@ -1,5 +1,5 @@
 #pragma once
-#include "vector"
+#include "Header.h"
 
 
 
@@ -12,11 +12,14 @@ public:
 	bool euqals();// compares an isntance of a Table
 	Table rotate();//rotatase table by 90° clockwise
 	Table operator ==(const Table);
-	int mI_base_size;
-
+	
+	
+//	friend std::ostream& operator<<(std::ostream& stream, const Table& table);
 
 
 private:
-	std::vector<int> table;
+	bool mB_usable;
+	std::vector<int> mI_table;
+	int mI_base_size;
 };
 
