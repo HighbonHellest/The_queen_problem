@@ -10,9 +10,11 @@ Table::Table()
 Table::Table(int a) : mI_base_size(a)
 {
 	mI_base_size = a;
+	mI_TNOL = mI_base_size / 2;
 	for (int i = 0; i < (a*a); ++i)
 	{
 		mI_table.push_back(0);
+		
 	}
 
 	mB_usable = TRUE;
@@ -29,14 +31,36 @@ bool Table::euqals()
 	return false;
 }
 
-Table Table::rotate()
+
+
+/*Table Table::rotate()
 {
+	int level = 0;
+	int last = mI_base_size;
+
+	while (level < mI_TNOL)
+	{
+		for (int i = level; i < last; ++i)
+		{
+		/*	Swap(m[level][i],m[i][last]);
+			Swap(m[level][i],m[last - 1 + level]);
+			Swap(m[level][i],m[last-i+level][level]);
+		}
+	}
+	++level;
+	--last;
+
 	return Table();
-}
+}*/
 
 Table Table::operator==(const Table)
 {
 	return Table();
+}
+
+void Table::solve_for(int i, int j)
+{
+
 }
 
 std::ostream & operator<<(std::ostream & stream, const Table & table)
